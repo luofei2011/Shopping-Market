@@ -1,0 +1,29 @@
+#users,#goods{
+	border-collapse:collapse;
+	margin:10px;
+	position:absolute;
+}
+
+#users{
+	height:120px;	
+	left:363px;
+}
+
+#users tr{
+	display:table-row;
+	height:30px;
+	align:center;
+}
+
+#goods {
+	height:160px;
+	top:200px;
+	display:none;
+}
+
+#goods a,#users a{
+	border-right:none;
+	text-align:center;
+	text-decoration:none;
+	display:block;
+}

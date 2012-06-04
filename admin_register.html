@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<meta>
+<head>
+	<title>管理员注册</title>
+	<link rel="stylesheet" href="css/login.css" style="text/css">
+	<script type=text/script language=javascript
+		src=js/jquery-1.7.1.js></script>
+	<script type=text/javascript src=js/changeButton.js></script>
+	<script type=text/javascript src=js/validate.js></script>
+	<script type=text/javascript src=js/Ajax_check.js></script>
+</head>
+<body>
+	<div id=logo></div>
+	<div id=register>
+	<form id=form_register name=admin_form action="php/install.php" method=post>
+		<div id=register-email>
+			<span class=register-icon></span>
+			<label for=UserName id=register_label>用户名</label>
+			<input type=text id=Username name=Username placeholder=用户名(英文字母、数字或下划线) onBlur="chkUsername()">
+		</div>
+		<div id=Username_check></div>
+		<div id=register-pwd>
+			<span class=register-pwd></span>
+			<label for=Pwd1 id=register_label>密码</label>
+			<input type=password name=Pwd1 id=Pwd1 placeholder=密码(不能少于8位) onBlur="chkpassword()">
+		</div>
+		<div id=Pwd1_check></div>
+		<div id=pwd-again>
+			<span class=register-pwd-again></span>
+			<label for=Pwd2 id=register_label>再次输入密码</label>
+			<input type=password name=Pwd2 id=Pwd2 placeholder=再次输入密码 onBlur="chkconfirmPassword()">
+		</div>
+		<div id=Pwd2_check></div>
+		<div id=register_email>
+			<span class=email-icon></span>
+			<label for=Email id=email_label>登录邮箱</label>
+			<input type=text id=Email name=Email placeholder=登录邮箱 onBlur="chkEmail()">
+		</div>
+		<div id=Email_check></div>
+		<div class=register_id>
+			<input type=submit id=register_id value="注册" onclick="SubmitCheck()">
+		</div>
+	</form>
+</div>
+</body>
+</html>

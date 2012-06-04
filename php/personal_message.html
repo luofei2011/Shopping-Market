@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>完善个人信息</title>
+<link rel="stylesheet" href="../css/login.css" style="text/css">
+</head>
+
+<body>
+	<?
+	require "header.php";
+	?>
+	<div id=logo>
+	</div>
+<div class=PM_main>
+	<form id=PM_form method=POST action="personalMessage.php">
+		<tr>
+			<td class=PM_Email_1>电子邮箱1:</td>
+			<td class=PM_Email_2>
+				<span class=PM_Email_3>
+					<em class=PM_Email_4>
+						<input type=text id=Email_1 name=Email_1>
+					</em>
+				</span>
+			</td>
+		</tr><br>
+		<tr>
+			<td class=PM_Phone_1>电子邮箱2:</td>
+			<td class=PM_Phone_2>
+				<span class=PM_Phone_3>
+					<em class=PM_Phone_4>
+						<input type=text id=Phone name=Phone>
+					</em>
+				</span>
+			</td>
+		</tr><br>
+		<div class=PM_submit>
+			<input type=submit id=PM_submit value="保存">
+			<input type=reset id=PM_reset value="取消">
+		</div>
+	</form>
+</div>
+</body>
+</html>

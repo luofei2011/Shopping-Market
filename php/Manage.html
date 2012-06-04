@@ -1,0 +1,70 @@
+<?
+$name=$_COOKIE[user];
+require "header.php";	
+require "configure.php";
+$sql="select admin from $table_user where id='$_COOKIE[id]'";
+$result2=mysql_query($sql,$link);
+$row=mysql_fetch_array($result2);
+?>
+<title>管理入口</title>
+ <table id="users" border="1" cellpadding="1" cellspacing="1" width="50%"> 
+	 <tr id="user_1">
+		<th>注册用户管理</th>
+	 </tr>
+	 <tr id="user_2">
+		 <td>
+			<a href="personal_message.html">修改用户信息</a>
+		 </td>
+		 <td>
+		   <a href="change_password.php">修改用户密码</a>
+		 </td>
+	 </tr>
+	 <tr>
+		 <td>
+			<a href="ShoppingCart.php">查看我的购物车</a>
+		 </td>
+		 <td>
+		   <a href="order.php">查看我的历史订单</a>
+		 </td>
+	 </tr>
+</table>
+<table id="good" border="1" cellpadding="1" cellspacing="1" width="50%"> 
+	<tr>
+		<th>商品管理</th>
+  </tr>
+  <tr>
+	  <td>
+		<a href="addNewSort.php">增加新的分类</a>
+	  </td>
+	  <td>
+		  <a href="alterSort.php">修改已有分类</a>
+	  </td>
+  </tr>
+<tr>
+	<td>
+		<a href="addNewGoods.php">增加新的商品</a>
+	</td>
+	<td>
+		<a href="alterGoods.php">修改已有商品</a>	
+	</td>
+</tr>
+<tr>
+	<td>
+		<a href="root_order.php">查看订单</a>
+	</td>
+	<td>
+		<a href="recoder.php">销售记录</a>	
+	</td>
+</tr>
+<?
+if($row[0]==3){
+echo "<style>";
+echo "#good{\n";
+echo "display:block;\n";
+echo "}\n";
+echo "</style>";
+}
+?>
+</table>
+</body>
+</html>
